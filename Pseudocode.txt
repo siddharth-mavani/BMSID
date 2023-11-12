@@ -1,0 +1,30 @@
+Define function cross_product with parameters a and b
+    Return cross product of a and b
+
+Define function norm with parameter a
+    Return norm of a
+
+Define function normalize with parameter a
+    Calculate n as norm of a
+    Return a divided by n
+
+Define function rotate_point with parameters point, angle, and line_direction_cosines
+    Convert angle to radians
+    Define rotation_matrix using angle and line_direction_cosines
+    Return multiplication of rotation_matrix and point
+
+Define function get_fourth_atom_coordinates with parameters first_atom_coordinates, second_atom_coordinates, third_atom_coordinates, bond_length, bond_angle, dihedral_angle
+    Define p as difference between second_atom_coordinates and first_atom_coordinates
+    Define q as difference between third_atom_coordinates and second_atom_coordinates
+    Define ABC_plane_normal as normalized cross product of p and q
+    Define unit_vector_along_q as normalized q
+    Define initial_pos as unit_vector_along_q multiplied by bond_length
+    Define rotated_pos as result of rotate_point function with parameters initial_pos, 180 minus bond_angle, and ABC_plane_normal
+    Define final_pos as result of rotate_point function with parameters rotated_pos, dihedral_angle, and unit_vector_along_q
+    Return sum of final_pos and third_atom_coordinates
+
+In main function
+    Define atom_coordinates as given coordinates
+    Define bond_length, bond_angle, and dihedral_angle as given values
+    Define fourth_atom_coordinates as result of get_fourth_atom_coordinates function with parameters atom_coordinates[0], atom_coordinates[1], atom_coordinates[2], bond_length, bond_angle, dihedral_angle
+    Print fourth_atom_coordinates
