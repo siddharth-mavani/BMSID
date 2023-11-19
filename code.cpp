@@ -48,28 +48,28 @@ array<double, 3> get_fourth_atom_coordinates(array<double, 3> first_atom_coordin
 }
 
 int main() {
-    vector<array <double, 3> > atom_coordinates = {{{0, 0, 0}}, {{1.453, 0, 0}}, {{1.959, -0.628, -1.30}}};
-    double bond_length = 1.3;
-    double bond_angle = 120;
-    double dihedral_angle = 30;
+    // vector<array <double, 3> > atom_coordinates = {{{0, 0, 0}}, {{1.453, 0, 0}}, {{1.959, -0.628, -1.30}}};
+    // double bond_length = 1.3;
+    // double bond_angle = 120;
+    // double dihedral_angle = 30;
 
-    // vector<array<double, 3>> atom_coordinates(3);
-    // double bond_length, bond_angle, dihedral_angle;
+    vector<array<double, 3>> atom_coordinates(3);
+    double bond_length, bond_angle, dihedral_angle;
 
-    // cout << "Enter coordinates for three atoms:" << endl;
-    // for(int i = 0; i < 3; i++) {
-    //     cout << "Atom " << i+1 << ": ";
-    //     cin >> atom_coordinates[i][0] >> atom_coordinates[i][1] >> atom_coordinates[i][2];
-    // }
+    cout << "Enter coordinates for three atoms:" << endl;
+    for(int i = 0; i < 3; i++) {
+        cout << "Atom " << i+1 << ": ";
+        cin >> atom_coordinates[i][0] >> atom_coordinates[i][1] >> atom_coordinates[i][2];
+    }
 
-    // cout << "Enter bond length: ";
-    // cin >> bond_length;
+    cout << "Enter bond length: ";
+    cin >> bond_length;
 
-    // cout << "Enter bond angle: ";
-    // cin >> bond_angle;
+    cout << "Enter bond angle: ";
+    cin >> bond_angle;
 
-    // cout << "Enter dihedral angle: ";
-    // cin >> dihedral_angle;
+    cout << "Enter dihedral angle: ";
+    cin >> dihedral_angle;
 
     array<double, 3> fourth_atom_coordinates = get_fourth_atom_coordinates(atom_coordinates[0], atom_coordinates[1], atom_coordinates[2], bond_length, bond_angle, dihedral_angle);
 
